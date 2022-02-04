@@ -4,5 +4,8 @@ using UserRegistration;
 //bool rs = User.ValidateFirstName();
 //Console.WriteLine(rs);
 
-bool a = User.ValidateLastName();
-Console.WriteLine(a);
+//bool a = User.ValidateLastName();
+//Console.WriteLine(a);
+
+bool rs = User.ValidateEmail();
+Console.WriteLine(rs);

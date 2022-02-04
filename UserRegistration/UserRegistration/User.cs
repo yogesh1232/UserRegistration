@@ -25,5 +25,13 @@ namespace UserRegistration
             Regex regex = new Regex(LAST_NAME);
             return regex.IsMatch("Kusakiya");
         }
+
+        public const string EMAIL = "^[a-zA-z]{3}([.]*[a-zA-Z])+[@][a-zA-z]+([.][a-z]{2,3})*$";
+        // valid user email id
+        public static bool ValidateEmail()
+        {
+            Regex regex = new Regex(EMAIL);
+            return regex.IsMatch("abc.xyz@bl.co.in");
+        }
     }
 }
