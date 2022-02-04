@@ -19,5 +19,8 @@ using UserRegistration;
 //bool e = User.PasswordR2();
 //Console.WriteLine(e);
 
-bool f = User.PasswordR3();
-Console.WriteLine(f);
+//bool f = User.PasswordR3();
+//Console.WriteLine(f);
+
+bool g = User.PasswordR4();
+Console.WriteLine(g);
