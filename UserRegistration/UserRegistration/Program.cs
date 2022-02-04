@@ -10,5 +10,8 @@ using UserRegistration;
 //bool b = User.ValidateEmail();
 //Console.WriteLine(b);
 
-bool c = User.ValidatePhone();
-Console.WriteLine(c);
+//bool c = User.ValidatePhone();
+//Console.WriteLine(c);
+
+bool d = User.PasswordR1();
+Console.WriteLine(d);

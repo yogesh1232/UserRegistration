@@ -41,5 +41,12 @@ namespace UserRegistration
             Regex regex = new Regex(MOBILE);
             return regex.IsMatch("91 9907296689");
         }
+
+        public const string PASSWORD_R1 = "^[a-zA-Z0-9]{8}";
+        public static bool PasswordR1()
+        {
+            Regex regex = new Regex(PASSWORD_R1);
+            return regex.IsMatch("Katvh120");
+        }
     }
 }
