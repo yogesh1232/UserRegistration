@@ -56,5 +56,13 @@ namespace UserRegistration
             Regex regex = new Regex(PASSWORD_R2);
             return regex.IsMatch("akXyb302");
         }
+
+        public const string PASSWORD_R3 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+        // minimum one numeric value
+        public static bool PasswordR3()
+        {
+            Regex regex = new Regex(PASSWORD_R3);
+            return regex.IsMatch("akXybty2");
+        }
     }
 }
