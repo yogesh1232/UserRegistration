@@ -48,5 +48,13 @@ namespace UserRegistration
             Regex regex = new Regex(PASSWORD_R1);
             return regex.IsMatch("Katvh120");
         }
+
+        public const string PASSWORD_R2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+        // minimum one character should be upper case
+        public static bool PasswordR2()
+        {
+            Regex regex = new Regex(PASSWORD_R2);
+            return regex.IsMatch("akXyb302");
+        }
     }
 }

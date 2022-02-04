@@ -13,5 +13,8 @@ using UserRegistration;
 //bool c = User.ValidatePhone();
 //Console.WriteLine(c);
 
-bool d = User.PasswordR1();
-Console.WriteLine(d);
+//bool d = User.PasswordR1();
+//Console.WriteLine(d);
+
+bool e = User.PasswordR2();
+Console.WriteLine(e);
