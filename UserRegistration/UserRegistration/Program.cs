@@ -7,5 +7,8 @@ using UserRegistration;
 //bool a = User.ValidateLastName();
 //Console.WriteLine(a);
 
-bool rs = User.ValidateEmail();
-Console.WriteLine(rs);
+//bool b = User.ValidateEmail();
+//Console.WriteLine(b);
+
+bool c = User.ValidatePhone();
+Console.WriteLine(c);

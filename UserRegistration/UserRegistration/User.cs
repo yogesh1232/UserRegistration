@@ -33,5 +33,13 @@ namespace UserRegistration
             Regex regex = new Regex(EMAIL);
             return regex.IsMatch("abc.xyz@bl.co.in");
         }
+
+        public const string MOBILE = "^([9][1])+[ ]+[0-9]{10}$";
+        //valid mobile no
+        public static bool ValidatePhone()
+        {
+            Regex regex = new Regex(MOBILE);
+            return regex.IsMatch("91 9907296689");
+        }
     }
 }
