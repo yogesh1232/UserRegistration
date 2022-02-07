@@ -72,5 +72,29 @@ namespace UserRegistration
             Regex regex = new Regex(PASSWORD_R4);
             return regex.IsMatch("akXs@bx3");
         }
+
+        // valid the email id.
+        public const string SAMPLE_EMAIL = "^[a-zA-z]{3}([+-_ .]*[a-zA-Z0-9]+)*[@][a-zA-z0-9]+(.[a-z]{2,3})*$";
+        public static void ValidatingEmail()
+        {
+            string[] sample = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc-100@abc.net", "abc.100@abc.com.au",
+                                 "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" ,"abc","abc@.com","abc123@gmail.a", "abc123@.com" ,
+                                 "abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a"};
+            Regex regex = new Regex(SAMPLE_EMAIL);
+            Console.WriteLine("Validates Email ID");
+            Validate(sample, regex);
+        }
+        // printing email id status
+        public static void Validate(string[] arr, Regex regex)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                bool rs = regex.IsMatch(arr[i]);
+                if (rs == true)
+                    Console.WriteLine(arr[i] + "-->" + "Valid Email ID");
+                else
+                    Console.WriteLine(arr[i] + "-->" + "Invalid Email ID");
+            }
+        }
     }
 }

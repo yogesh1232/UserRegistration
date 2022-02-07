@@ -22,5 +22,7 @@ using UserRegistration;
 //bool f = User.PasswordR3();
 //Console.WriteLine(f);
 
-bool g = User.PasswordR4();
-Console.WriteLine(g);
+//bool g = User.PasswordR4();
+//Console.WriteLine(g);
+
+User.ValidatingEmail();
