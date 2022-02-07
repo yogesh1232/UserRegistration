@@ -11,42 +11,112 @@ namespace UserRegistration
     {
         public const string FIRST_NAME = "^[A-Z]{1}[a-z]{1,}$";
         // valid user first name
-        
-        public static bool ValidateFirstName()
+
+        public static string ValidateFirstName(string name)
         {
             Regex regex = new Regex(FIRST_NAME);
-            return regex.IsMatch("Yogesh");
+            try
+            {
+                if (regex.IsMatch(name))
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+            catch (Exception)
+            {
+                throw new UserException(UserException.ExceptionType.NULL_EXCEPTION, "First name is not valid");
+            }
         }
 
         public const string LAST_NAME = "^[A-Z]{1}[a-z]{1,}$";
         // valid user last name
-        public static bool ValidateLastName()
+        public static string ValidateLastName(string name)
         {
             Regex regex = new Regex(LAST_NAME);
-            return regex.IsMatch("Kusakiya");
+            try
+            {
+                if (regex.IsMatch(name))
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+            catch (Exception)
+            {
+                throw new UserException(UserException.ExceptionType.NULL_EXCEPTION, "Last name is not valid");
+            }
         }
 
         public const string EMAIL = "^[a-zA-z]{3}([.]*[a-zA-Z])+[@][a-zA-z]+([.][a-z]{2,3})*$";
         // valid user email id
-        public static bool ValidateEmail()
+        public static string ValidateEmail(string email)
         {
             Regex regex = new Regex(EMAIL);
-            return regex.IsMatch("abc.xyz@bl.co.in");
+            try
+            {
+                if (regex.IsMatch(email))
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+            catch (Exception)
+            {
+                throw new UserException(UserException.ExceptionType.NULL_EXCEPTION, "Email name is not valid");
+            }
         }
 
         public const string MOBILE = "^([9][1])+[ ]+[0-9]{10}$";
         //valid mobile no
-        public static bool ValidatePhone()
+        public static string ValidatePhone(string number)
         {
             Regex regex = new Regex(MOBILE);
-            return regex.IsMatch("91 9907296689");
+            try
+            {
+                if (regex.IsMatch(number))
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+            catch (Exception)
+            {
+                throw new UserException(UserException.ExceptionType.NULL_EXCEPTION, "Phone Number is not valid");
+            }
         }
 
         public const string PASSWORD_R1 = "^[a-zA-Z0-9]{8}";
-        public static bool PasswordR1()
+        public static string ValidatePassword(string password)
         {
             Regex regex = new Regex(PASSWORD_R1);
-            return regex.IsMatch("Katvh120");
+            try
+            {
+                if (regex.IsMatch(password))
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+            catch (Exception)
+            {
+                throw new UserException(UserException.ExceptionType.NULL_EXCEPTION, "Password is not valid");
+            }
         }
 
         public const string PASSWORD_R2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
